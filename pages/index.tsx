@@ -1,7 +1,13 @@
+import MainScreen from "@screens/MainScreen/MainScreen";
+
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
-  return <div>123</div>;
+  return (
+    <>
+      <MainScreen />
+    </>
+  );
 };
 
 export default Home;

@@ -26,8 +26,9 @@
       "@utils/*": ["./utils/*"],
       "@store/*": ["./store/*"],
       "@assets/*": ["./assets/*"],
-      "@context/*": ["./context/*"]
-    }
+      "@contexts/*": ["./contexts/*"]
+    },
+    "incremental": true
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
