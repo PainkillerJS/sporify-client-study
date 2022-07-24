@@ -70,7 +70,7 @@ const NavBar: FC = () => {
         <List>
           {menuList.map(({ Icon, title, href }) => (
             <Link href={href} key={title}>
-              <ListItem disablePadding>
+              <ListItem onClick={handleDrawerToggle(false)} disablePadding>
                 <ListItemButton>
                   <ListItemIcon>
                     <Icon />
