@@ -1,4 +1,4 @@
-import MainScreen from "@screens/MainScreen/MainScreen";
+import MainScreen from "@screens/MainScreen";
 
 import type { NextPage } from "next";
 

@@ -1,7 +1,9 @@
+import TracksListScreen from "@screens/TracksListScreen";
+
 import type { NextPage } from "next";
 
 const TracksPage: NextPage = () => {
-  return <div>Список треков</div>;
+  return <TracksListScreen />;
 };
 
 export default TracksPage;
