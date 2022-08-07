@@ -6,7 +6,7 @@ export interface TrackModel {
   artist: string;
   text: string;
   listens: string;
-  pictures: string;
+  picture: string;
   audio: string;
   comments: CommentModel[];
 }
