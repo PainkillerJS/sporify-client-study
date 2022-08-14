@@ -1,0 +1,10 @@
+.step {
+  &__content {
+    margin: 70px 0;
+    height: 270px;
+
+    > * {
+      width: 600px;
+    }
+  }
+}
