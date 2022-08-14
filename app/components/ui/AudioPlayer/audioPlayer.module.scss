@@ -1,0 +1,31 @@
+.player {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #e8e8e8;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 7px;
+  z-index: 1;
+
+  &__rangeAudio {
+    width: 100%;
+
+    & > input {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  &__main {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  &__volume {
+    margin: 0 5px 0 auto;
+  }
+}

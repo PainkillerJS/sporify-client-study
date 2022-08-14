@@ -1,6 +1,7 @@
 import { Container } from "@mui/material";
 
 import NavBar from "@ui/NavBar";
+import AudioPlayer from "@ui/AudioPlayer";
 
 import styles from "./layout.module.scss";
 
@@ -11,6 +12,7 @@ const MainLayout: FC<PropsWithChildren> = ({ children }) => {
     <>
       <NavBar />
       <Container className={styles.container}>{children}</Container>
+      <AudioPlayer />
     </>
   );
 };
