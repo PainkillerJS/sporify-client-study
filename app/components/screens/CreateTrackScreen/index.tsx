@@ -6,14 +6,22 @@ import { Button, Grid } from "@mui/material";
 import StepComponentHOC from "@utils/hoc/StepComponentHOC";
 
 import FirstStepCreate from "@screens/CreateTrackScreen/components/FirstStepCreate";
+import SecondStepCreate from "@screens/CreateTrackScreen/components/SecondStepCreate";
+import ThirdStepCreate from "@screens/CreateTrackScreen/components/ThirdStepCreate";
 
 const CreateTrackScreen: FC = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const [picture, setPicture] = useState<File>();
+  const [audio, setAudio] = useState<File>();
 
   const changeStep = (value: -1 | 1) => () =>
     setActiveStep((prevState) => prevState + value);
 
-  const COMPONENT_STEP = [<FirstStepCreate key={0} />];
+  const COMPONENT_STEP = [
+    <FirstStepCreate key={0} />,
+    <SecondStepCreate setFile={setPicture} key={1} />,
+    <ThirdStepCreate setFile={setAudio} key={2} />
+  ];
 
   return (
     <>
