@@ -5,11 +5,16 @@ import type { FC, MouseEventHandler } from "react";
 
 interface GroupButtonsStart {
   isActive: boolean;
+  onCallback?: () => void;
 }
 
-const GroupButtonsStart: FC<GroupButtonsStart> = ({ isActive }) => {
-  const handleStopPropagation: MouseEventHandler<HTMLButtonElement> = (event) =>
+const GroupButtonsStart: FC<GroupButtonsStart> = ({ isActive, onCallback }) => {
+  const handleStopPropagation: MouseEventHandler<HTMLButtonElement> = (
+    event
+  ) => {
     event.stopPropagation();
+    onCallback?.();
+  };
 
   return (
     <IconButton onClick={handleStopPropagation}>
