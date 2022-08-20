@@ -33,12 +33,13 @@ const playerSlice = createSlice({
       state.currentTime = action.payload;
     },
     setVolume: (state, action: PayloadAction<number>) => {
+      console.log(action);
       state.volume = action.payload;
     },
     setDuration: (state, action: PayloadAction<number>) => {
       state.duration = action.payload;
     },
-    setActive: (state, action: PayloadAction<TrackModel>) => {
+    setActiveTrack: (state, action: PayloadAction<TrackModel>) => {
       state.active = action.payload;
       state.duration = 0;
       state.currentTime = 0;
@@ -52,7 +53,7 @@ export const {
   setCurrentTime,
   setVolume,
   setDuration,
-  setActive
+  setActiveTrack
 } = playerSlice.actions;
 
 export default playerSlice.reducer;

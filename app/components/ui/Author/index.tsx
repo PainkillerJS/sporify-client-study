@@ -5,7 +5,7 @@ import styles from "./author.module.scss";
 import type { TrackModel } from "@shared/model/track.model";
 import type { FC } from "react";
 
-interface AuthorProps extends Pick<TrackModel, "name" | "artist"> {}
+interface AuthorProps extends Partial<Pick<TrackModel, "name" | "artist">> {}
 
 const Author: FC<AuthorProps> = ({ name, artist }) => {
   return (

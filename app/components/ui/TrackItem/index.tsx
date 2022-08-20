@@ -5,12 +5,16 @@ import { Card, IconButton } from "@mui/material";
 import { Delete } from "@mui/icons-material";
 
 import GroupButtonsStart from "@ui/GroupButtonsStart";
+import Author from "@ui/Author";
+
+import { useAppDispatch } from "@hooks/redux";
+
+import { setActiveTrack, startPlayer } from "@services/player/slice";
 
 import styles from "./trackItem.module.scss";
 
 import type { FC, MouseEventHandler } from "react";
 import type { TrackModel } from "@shared/model/track.model";
-import Author from "@ui/Author";
 
 interface TrackItemProps {
   track: TrackModel;
@@ -19,8 +23,15 @@ interface TrackItemProps {
 
 const TrackItem: FC<TrackItemProps> = ({ track, isActive }) => {
   const { name, picture, artist, _id } = track;
-  const handleStopPropagation: MouseEventHandler<HTMLButtonElement> = (event) =>
+
+  const dispatch = useAppDispatch();
+
+  const handlePlayAudio: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation();
+
+    dispatch(setActiveTrack(track));
+    dispatch(startPlayer());
+  };
 
   return (
     <Link href={`/tracks/${_id}`}>
@@ -33,10 +44,7 @@ const TrackItem: FC<TrackItemProps> = ({ track, isActive }) => {
 
         {isActive && <div></div>}
 
-        <IconButton
-          onClick={handleStopPropagation}
-          className={styles.track__delete}
-        >
+        <IconButton onClick={handlePlayAudio} className={styles.track__delete}>
           <Delete />
         </IconButton>
       </Card>
