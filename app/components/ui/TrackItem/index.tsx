@@ -14,7 +14,7 @@ import { setActiveTrack, startPlayer } from "@services/player/slice";
 import styles from "./trackItem.module.scss";
 
 import type { FC, MouseEventHandler } from "react";
-import type { TrackModel } from "@shared/model/track.model";
+import type { TrackModel } from "@services/../../../shared/model/track.model";
 
 interface TrackItemProps {
   track: TrackModel;

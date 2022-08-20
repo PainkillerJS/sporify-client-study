@@ -33,7 +33,6 @@ const playerSlice = createSlice({
       state.currentTime = action.payload;
     },
     setVolume: (state, action: PayloadAction<number>) => {
-      console.log(action);
       state.volume = action.payload;
     },
     setDuration: (state, action: PayloadAction<number>) => {

@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 
 import styles from "./author.module.scss";
 
-import type { TrackModel } from "@shared/model/track.model";
+import type { TrackModel } from "@services/../../../shared/model/track.model";
 import type { FC } from "react";
 
 interface AuthorProps extends Partial<Pick<TrackModel, "name" | "artist">> {}

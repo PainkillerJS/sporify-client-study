@@ -52,8 +52,8 @@ const AudioPlayer: FC = () => {
   };
 
   const setAudio = () => {
-    if (audio) {
-      audio.src = active!.audio;
+    if (audio && active) {
+      audio.src = active.audio;
       audio.volume = volume / 100;
       audio.onloadedmetadata = () => {
         dispatch(setDuration(Math.ceil(audio.duration)));

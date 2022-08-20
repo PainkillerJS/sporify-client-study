@@ -2,7 +2,7 @@ import { Box, Grid } from "@mui/material";
 import TrackItem from "@ui/TrackItem";
 
 import type { FC } from "react";
-import type { TrackModel } from "@shared/model/track.model";
+import type { TrackModel } from "@services/../../../shared/model/track.model";
 
 interface TracksListProps {
   tracks: TrackModel[];
